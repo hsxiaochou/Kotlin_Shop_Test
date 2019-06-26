@@ -12,8 +12,6 @@ class AppManager private constructor() {
     companion object {
         val instance: AppManager by lazy { AppManager() }
     }
-
-
     //入栈
     fun addActivity(activity: Activity) {
         activiyStack.add(activity)
