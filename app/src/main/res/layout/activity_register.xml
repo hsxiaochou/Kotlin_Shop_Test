@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               style="@style/MatchMatch.Vertical.Common">
+
+
+    <com.example.employee.kotlin_shop_test.BaseLibrary.widgets.HeaderBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isShowBack="false"
+            app:titleText="注册"
+            app:rightText="登录"
+    />
     <LinearLayout android:background="@drawable/border_corner_all"
                   android:layout_margin="@dimen/common_margin"
                   style="@style/MatchWrap.Vertical">
@@ -15,6 +25,7 @@
                       android:drawablePadding="@dimen/common_padding_small"
                       android:layout_weight="1.0"
                       android:inputType="phone"/>
+
             <View style="@style/DividerFixedWidth.MarginTopBottom"/>
 
         </LinearLayout>
@@ -51,7 +62,6 @@
                   android:inputType="textPassword"/>
     </LinearLayout>
     <Button android:id="@+id/mRegisterBtn"
-            android:enabled="true"
             style="@style/FullBtnStyle"
             android:text="注册"/>
 </LinearLayout>

@@ -12,7 +12,7 @@ buildscript {
     ext.dagger_version = '2.11'
 
     ext.rx_lifecycle_version = '1.0'
-
+    ext.android_support_version = "25.3.1"
     ext.glide_version = "3.7.0"
 
     ext.circle_imageView_version = "2.1.0"

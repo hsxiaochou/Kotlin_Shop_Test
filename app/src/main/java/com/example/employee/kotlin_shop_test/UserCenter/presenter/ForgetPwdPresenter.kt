@@ -4,21 +4,23 @@ import com.example.employee.kotlin_shop_test.BaseLibrary.presenter.BasePresenter
 import com.example.employee.kotlin_shop_test.BaseLibrary.presenter.view.BaseView
 import com.example.employee.kotlin_shop_test.BaseLibrary.rx.BaseSubscriber
 import com.example.employee.kotlin_shop_test.BaseLibrary.rx.execute
+import com.example.employee.kotlin_shop_test.UserCenter.presenter.view.ForgetPwdView
 import com.example.employee.kotlin_shop_test.UserCenter.presenter.view.RegisterView
 import com.example.employee.kotlin_shop_test.UserCenter.service.UserService
 import com.example.employee.kotlin_shop_test.UserCenter.service.impl.UserServiceImpl
 import javax.inject.Inject
 
 
-class RegisterPresenter @Inject constructor() : BasePresenter<RegisterView>() {
+class ForgetPwdPresenter @Inject constructor() : BasePresenter<ForgetPwdView>() {
     @Inject
     lateinit var userService: UserServiceImpl
-    fun register(mobile: String, verifyCode: String, Pwd: String) {
+
+    fun forgetPwd(mobile: String, Pwd: String) {
         mView.showLoading()
-        userService.register(mobile, verifyCode, Pwd)
-            .execute(object : BaseSubscriber<Boolean>(mView) {
-                override fun onNext(t: Boolean) {
-                    mView.onRegisterResult(true)
+        userService.forgetPwd(mobile, Pwd)
+            .execute(object : BaseSubscriber<String>(mView) {
+                override fun onNext(t: String) {
+                    mView.onForgetPwdResult("")
                 }
             })
     }

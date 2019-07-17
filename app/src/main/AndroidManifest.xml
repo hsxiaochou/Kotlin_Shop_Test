@@ -3,6 +3,8 @@
           package="com.example.employee.kotlin_shop_test">
 
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
             android:allowBackup="true"
@@ -11,18 +13,21 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".UserCenter.activity.RegisterActivity">
+        <activity android:name=".UserCenter.activity.UserInfoActivity">
+        </activity>
+        <activity android:name=".UserCenter.activity.ForgetPwdActivity">
+        </activity>
+        <activity android:name=".UserCenter.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
+        <activity android:name=".UserCenter.activity.RegisterActivity">
+        </activity>
         <activity android:name=".BaseLibrary.activity.BaseActivity"/>
-
         <activity android:name=".MainActivity">
-
         </activity>
     </application>
 
