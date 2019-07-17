@@ -9,5 +9,6 @@ class Constant {
         const val TABLE_PREFS = "Kotlin_mall"
         //Token Key
         const val KEY_SP_TOKEN = "token"
+        const val PERMISSION_CODE_FIRST = 0x13//权限请求码
     }
 }

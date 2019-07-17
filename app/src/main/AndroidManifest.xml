@@ -18,16 +18,17 @@
         <activity android:name=".UserCenter.activity.ForgetPwdActivity">
         </activity>
         <activity android:name=".UserCenter.activity.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".UserCenter.activity.RegisterActivity">
         </activity>
         <activity android:name=".BaseLibrary.activity.BaseActivity"/>
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
     </application>
 
