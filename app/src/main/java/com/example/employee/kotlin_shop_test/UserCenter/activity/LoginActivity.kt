@@ -1,7 +1,5 @@
 package com.example.employee.kotlin_shop_test.UserCenter.activity
 
-import android.icu.lang.UCharacter.GraphemeClusterBreak.V
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.employee.kotlin_shop_test.BaseLibrary.activity.BaseMvpActivity
@@ -10,7 +8,6 @@ import com.example.employee.kotlin_shop_test.R
 import com.example.employee.kotlin_shop_test.UserCenter.presenter.LoginPresenter
 import com.example.employee.kotlin_shop_test.UserCenter.presenter.view.LoginView
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_register.mMobileEt
 import kotlinx.android.synthetic.main.activity_register.mPwdEt
 import org.jetbrains.anko.clearTop

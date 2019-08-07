@@ -4,12 +4,19 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:gravity="bottom"
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
 
-    <com.example.employee.kotlin_shop_test.BaseLibrary.widgets.BottomNavBar
+    <FrameLayout
+            android:layout_weight="1"
+            android:id="@+id/mFl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+
+    <com.example.employee.kotlin_shop_test.ui.widgets.BottomNavBar
             android:id="@+id/mBottomNavBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></com.example.employee.kotlin_shop_test.BaseLibrary.widgets.BottomNavBar>
+            android:layout_height="wrap_content"></com.example.employee.kotlin_shop_test.ui.widgets.BottomNavBar>
 </LinearLayout>

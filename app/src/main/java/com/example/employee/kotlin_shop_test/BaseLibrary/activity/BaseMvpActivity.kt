@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import com.example.employee.kotlin_shop_test.BaseLibrary.presenter.BasePresenter
 import com.example.employee.kotlin_shop_test.BaseLibrary.presenter.view.BaseView
-import com.example.employee.kotlin_shop_test.BaseLibrary.widgets.ProgressLoading
+import com.example.employee.kotlin_shop_test.ui.widgets.ProgressLoading
 import org.jetbrains.anko.toast
 import javax.inject.Inject
 

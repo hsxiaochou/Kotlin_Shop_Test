@@ -79,4 +79,8 @@
     <dimen name="badge_height_padding">1dp</dimen><!-- 1 -->
     <dimen name="badge_top_margin">2dp</dimen><!-- 2 -->
 
+    <dimen name="news_height">45dp</dimen>
+    <dimen name="msg_icon_height">45dip</dimen>
+    <dimen name="msg_icon_width">45dip</dimen>
+
 </resources>

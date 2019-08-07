@@ -1,7 +1,5 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
@@ -13,7 +11,14 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+
     }
     buildTypes {
         release {
@@ -25,13 +30,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
-    implementation "com.android.support:support-v4:${android_support_version}"
-    implementation "com.android.support:appcompat-v7:${android_support_version}"
-    implementation "com.android.support:recyclerview-v7:${android_support_version}"
-    implementation "com.android.support:design:${android_support_version}"
-    implementation "com.android.support:cardview-v7:${android_support_version}"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
 
     // Anko Commons
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
@@ -63,4 +68,37 @@ dependencies {
 
     //底部导航
     implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
+
+    //Banner
+    implementation 'com.youth.banner:banner:1.4.10'  //最新版本
+
+    //标签
+    implementation 'com.github.shts:TriangleLabelView:1.1.2'
+
+    //画廊
+    implementation 'com.github.crosswall:Android-Coverflow:release-v1.0.4'
+
+    //MulitStateView
+    implementation "com.github.Kennyc1012:MultiStateView:$multi_state_view_version"
+
+    //上下拉刷新
+    implementation 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
+
+
+    // add for room
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    kapt 'android.arch.persistence.room:compiler:1.1.1'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    implementation 'ren.qinc.numberbutton:numberbutton:0.0.1'
+    //FlowLayout
+    implementation 'com.zhy:flowlayout-lib:1.0.3'
+
+
 }

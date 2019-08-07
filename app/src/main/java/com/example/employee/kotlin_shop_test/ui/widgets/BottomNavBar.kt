@@ -1,4 +1,4 @@
-package com.example.employee.kotlin_shop_test.BaseLibrary.widgets
+package com.example.employee.kotlin_shop_test.ui.widgets
 
 import android.content.Context
 import android.util.AttributeSet
@@ -31,10 +31,20 @@ class BottomNavBar @JvmOverloads constructor(
 
         //分类
         val categoryItem =
-            BottomNavigationItem(R.drawable.btn_nav_cart_press, resources.getString(R.string.nav_bar_category))
+            BottomNavigationItem(R.drawable.btn_nav_category_press, resources.getString(R.string.nav_bar_category))
+                .setActiveColorResource(R.color.common_blue)
+                .setInActiveColorResource(R.color.text_normal)
+                .setInactiveIconResource(R.drawable.btn_nav_category_normal)
+
+
+        //购物车
+        val cartItem =
+            BottomNavigationItem(R.drawable.btn_nav_cart_press, resources.getString(R.string.nav_bar_cart))
                 .setActiveColorResource(R.color.common_blue)
                 .setInActiveColorResource(R.color.text_normal)
                 .setInactiveIconResource(R.drawable.btn_nav_cart_normal)
+
+
         //消息
         val msgItem = BottomNavigationItem(R.drawable.btn_nav_msg_press, resources.getString(R.string.nav_bar_msg))
             .setActiveColorResource(R.color.common_blue)
@@ -56,6 +66,7 @@ class BottomNavBar @JvmOverloads constructor(
             .addItem(categoryItem)
             .addItem(msgItem)
             .addItem(UserItem)
+            .addItem(cartItem)
             .setFirstSelectedPosition(0)
             .initialise()
 

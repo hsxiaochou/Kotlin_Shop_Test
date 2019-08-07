@@ -1,4 +1,4 @@
-package com.example.employee.kotlin_shop_test.BaseLibrary.widgets
+package com.example.employee.kotlin_shop_test.ui.widgets
 
 import android.app.Dialog
 import android.content.Context

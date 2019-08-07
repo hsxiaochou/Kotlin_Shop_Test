@@ -10,7 +10,8 @@ import com.kotlin.base.common.BaseApplication
     SP工具类
  */
 object AppPrefsUtils {
-    private var sp: SharedPreferences = BaseApplication.context.getSharedPreferences(Constant.TABLE_PREFS, Context.MODE_PRIVATE)
+    private var sp: SharedPreferences =
+        BaseApplication.instance.getSharedPreferences(Constant.TABLE_PREFS, Context.MODE_PRIVATE)
     private var ed: Editor
 
     init {
